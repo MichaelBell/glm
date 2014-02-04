@@ -30,7 +30,12 @@
 #define glm_core_detail
 
 #include "setup.hpp"
+
+// Kythera change: don't override a previously defined assert.
+#ifndef assert 
 #include <cassert>
+#endif
+
 #if(defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L))
 #include <cstdint>
 #endif
