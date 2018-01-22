@@ -47,17 +47,13 @@ namespace detail
 	GLM_DETAIL_IS_INT(signed short);
 	GLM_DETAIL_IS_INT(signed int);
 	GLM_DETAIL_IS_INT(signed long);
-#if !defined(__ORBIS__)
 	GLM_DETAIL_IS_INT(highp_int_t);
-#endif
 
 	GLM_DETAIL_IS_UINT(unsigned char);
 	GLM_DETAIL_IS_UINT(unsigned short);
 	GLM_DETAIL_IS_UINT(unsigned int);
 	GLM_DETAIL_IS_UINT(unsigned long);
-#if !defined(__ORBIS__)
 	GLM_DETAIL_IS_UINT(highp_uint_t);
-#endif
 }//namespace detail
 
 	/// @addtogroup core_precision
