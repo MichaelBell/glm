@@ -26,6 +26,11 @@ namespace glm
 
 		// -- Data --
 
+#ifdef _MSC_VER
+#pragma warning(push)
+#pragma warning(disable: 4201) // nonstandard extension used: nameless struct/union
+#endif
+
 #		if GLM_HAS_ONLY_XYZW
 			T x, y, z;
 
@@ -59,6 +64,7 @@ namespace glm
 #				endif//GLM_SWIZZLE
 			};
 
+
 #			if GLM_COMPILER & GLM_COMPILER_CLANG
 #				pragma clang diagnostic pop
 #			endif
@@ -74,6 +80,10 @@ namespace glm
 				GLM_SWIZZLE_GEN_VEC_FROM_VEC3(T, P)
 #			endif//GLM_SWIZZLE
 #		endif//GLM_LANG
+
+#ifdef _MSC_VER
+#pragma warning(pop)
+#endif
 
 		// -- Component accesses --
 

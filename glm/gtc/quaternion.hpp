@@ -39,6 +39,11 @@ namespace glm
 
 		// -- Data --
 
+#ifdef _MSC_VER
+#pragma warning(push)
+#pragma warning(disable: 4201) // nonstandard extension used: nameless struct/union
+#endif
+
 #		if GLM_HAS_ALIGNED_TYPE
 #			if GLM_COMPILER & GLM_COMPILER_GCC
 #				pragma GCC diagnostic push
@@ -65,6 +70,10 @@ namespace glm
 #		else
 			T x, y, z, w;
 #		endif
+
+#ifdef _MSC_VER
+#pragma warning(pop)
+#endif
 
 		// -- Component accesses --
 
